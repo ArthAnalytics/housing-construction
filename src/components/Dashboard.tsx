@@ -141,16 +141,6 @@ export default function Dashboard() {
           weight: "bold" as const,
         },
         color: "#C2410C",
-        backgroundColor: "rgba(255, 255, 255, 0.9)",
-        borderColor: "#C2410C",
-        borderWidth: 1,
-        borderRadius: 4,
-        padding: {
-          top: 2,
-          bottom: 2,
-          left: 4,
-          right: 4,
-        },
       },
     },
     scales: {
@@ -217,19 +207,9 @@ export default function Dashboard() {
 
       {/* Main Content */}
       <main className="flex-1 w-full px-4 sm:px-6 lg:px-8 py-4 overflow-hidden">
-        <div className="flex flex-col gap-6 h-full">
-          {/* Chart */}
-          <div className="bg-white rounded-lg shadow-md p-6 flex flex-col flex-[0_0_50%] min-h-0">
-            <h2 className="text-base font-semibold text-gray-900 mb-4">
-              Housing Construction in {selectedCounty} FY2011 - FY2025
-            </h2>
-            <div className="flex-1 min-h-0 pb-8 pr-4">
-              <Line data={chartData} options={chartOptions} />
-            </div>
-          </div>
-
+        <div className="flex flex-row gap-6 h-full">
           {/* Table */}
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden flex flex-col flex-1 min-h-0">
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden flex flex-col flex-[0_0_55%] min-h-0">
             <div className="p-4 border-b border-gray-200">
               <div className="flex items-center justify-between gap-4 flex-wrap">
                 <h2 className="text-sm font-semibold text-gray-900">
@@ -325,6 +305,16 @@ export default function Dashboard() {
                 <span className="font-semibold not-italic">Note:</span> Numbers
                 rounded to the nearest ten
               </p>
+            </div>
+          </div>
+
+          {/* Chart */}
+          <div className="bg-white rounded-lg shadow-md p-6 flex flex-col flex-1 min-h-0">
+            <h2 className="text-base font-semibold text-gray-900 mb-4">
+              Housing Construction in {selectedCounty} FY2011 - FY2025
+            </h2>
+            <div className="flex-1 min-h-0 pb-8 pr-4">
+              <Line data={chartData} options={chartOptions} />
             </div>
           </div>
         </div>
