@@ -254,20 +254,20 @@ export default function Dashboard() {
               ref={tableContainerRef}
             >
               <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-gray-50">
+                <thead className="bg-gray-50 sticky top-0 z-30">
                   <tr>
-                    <th className="sticky left-0 z-20 bg-gray-50 px-6 py-2.5 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                    <th className="sticky left-0 z-40 bg-gray-50 px-6 py-2.5 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
                       County
                     </th>
                     {years.map((year) => (
                       <th
                         key={year}
-                        className="px-4 py-2.5 text-right text-xs font-semibold text-gray-700 uppercase tracking-wider"
+                        className="px-4 py-2.5 text-right text-xs font-semibold text-gray-700 uppercase tracking-wider bg-gray-50"
                       >
                         {year}
                       </th>
                     ))}
-                    <th className="sticky right-0 z-20 bg-gray-50 px-6 py-2.5 text-right text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                    <th className="sticky right-0 z-40 bg-gray-50 px-6 py-2.5 text-right text-xs font-semibold text-gray-700 uppercase tracking-wider">
                       Total
                     </th>
                   </tr>
